@@ -1,5 +1,5 @@
-import { ExternalSystems } from './ExternalSystems';
-import { Gearbox } from './Gearbox';
+import { ExternalSystems } from "./ExternalSystems";
+import { Gearbox } from "./Gearbox";
 
 class GearboxDriver {
   private externalSystems: ExternalSystems = new ExternalSystems();
@@ -9,6 +9,9 @@ class GearboxDriver {
   private characteristics: Object[] = [2000, 1000, 1000, 0.5, 2500, 4500, 1500, 0.5, 5000, 0.7, 5000, 5000, 1500, 2000, 3000, 6500, 14];
 
   private gearBoxDriverMode!: number; // mode 1-Eco, 2-Comfort, 3-Sport
+
+  private isMDynamicsMode!: boolean;
+
   private aggressiveMode!: number; // 1-3
 
   public handleGas(threshold: number): void {
@@ -46,6 +49,11 @@ class GearboxDriver {
     switch (this.gearBoxDriverMode) {
       case 1: {
         // prettier-ignore
+        if (this.isMDynamicsMode && this.externalSystems.getAngularSpeed() > 50) {
+          break;
+        }
+
+        // prettier-ignore
         if (currentRpm > <number>this.characteristics[0] && this.aggressiveMode === 1) {
           if (!(currentGear === this.gearbox.getMaxDrive())) {
             this.gearbox.setCurrentGear(currentGear + 1);
@@ -68,6 +76,11 @@ class GearboxDriver {
       }
 
       case 2: {
+        // prettier-ignore
+        if (this.isMDynamicsMode && this.externalSystems.getAngularSpeed() > 50) {
+          break;
+        }
+
         // prettier-ignore
         if (currentRpm < <number>this.characteristics[2]) { // czy redukowac bo za male obroty
           if (currentGear != 1) {
@@ -92,7 +105,10 @@ class GearboxDriver {
           }
         }
 
-        if (threshold < <number>this.characteristics[3] && this.aggressiveMode === 3) {
+        if (
+          threshold < <number>this.characteristics[3] &&
+          this.aggressiveMode === 3
+        ) {
           if (currentRpm > (<number>this.characteristics[4] * 130) / 100) {
             if (currentGear != this.gearbox.getMaxDrive()) {
               this.gearbox.setCurrentGear(currentGear + 1);
@@ -112,6 +128,11 @@ class GearboxDriver {
       }
 
       case 3: {
+        // prettier-ignore
+        if (this.isMDynamicsMode && this.externalSystems.getAngularSpeed() > 50) {
+          break;
+        }
+
         // prettier-ignore
         if (currentRpm < <number>this.characteristics[6]) { // czy zbyt obroty i trzeba zredukowac
           if (currentGear != 1) {
