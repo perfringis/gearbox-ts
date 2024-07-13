@@ -17,3 +17,6 @@ This repository constitutes a record of my learning process from the devupgrade.
   * [EPISODE 1.3.3 -> Stand-up](https://github.com/perfringis/gearbox-ts/tree/main/season-1/episode%201-3-3)
   * [EPISODE 1.4.1 -> Requirement no. 3(destroying fragile implementation)](https://github.com/perfringis/gearbox-ts/tree/main/season-1/episode%201-4-1)
   * [EPISODE 1.4.2 -> Stand-up](https://github.com/perfringis/gearbox-ts/tree/main/season-1/episode%201-4-2)
+- [SEASON 2](https://github.com/perfringis/gearbox-ts/tree/main/season-2)
+  * [EPISODE 2.1.0 -> Introduction/Stand-up(how it started)](https://github.com/perfringis/gearbox-ts/tree/main/season-1/episode%202-1-0)
+  * [EPISODE 2.1.1 -> Requirement no. 1](https://github.com/perfringis/gearbox-ts/tree/main/season-1/episode%202-1-1)
