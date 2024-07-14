@@ -25,3 +25,5 @@ This repository constitutes a record of my learning process from the devupgrade.
   * [EPISODE 2.1.4 -> Explanation](https://github.com/perfringis/gearbox-ts/tree/main/season-1/episode%202-1-4)
   * [EPISODE 2.1.5 -> Write the main script to check the implementation](https://github.com/perfringis/gearbox-ts/tree/main/season-1/episode%202-1-5)
   * [EPISODE 2.2.1 -> Requirement no. 2](https://github.com/perfringis/gearbox-ts/tree/main/season-1/episode%202-2-1)
+  * [EPISODE 2.2.2 -> Copy&Paste the code](https://github.com/perfringis/gearbox-ts/tree/main/season-1/episode%202-2-2)
+  * [EPISODE 2.2.3 -> Explanation](https://github.com/perfringis/gearbox-ts/tree/main/season-1/episode%202-2-3)
