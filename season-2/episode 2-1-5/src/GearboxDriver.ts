@@ -27,6 +27,7 @@ export class GearboxDriver {
         return;
       }
 
+      console.log("No reduction");
       this.gearbox.setCurrentGear(<number>this.gearbox.getCurrentGear() + 1);
     }
 
@@ -35,6 +36,7 @@ export class GearboxDriver {
         return;
       }
 
+      console.log("No reduction");
       this.gearbox.setCurrentGear(<number>this.gearbox.getCurrentGear() - 1);
     }
   }
