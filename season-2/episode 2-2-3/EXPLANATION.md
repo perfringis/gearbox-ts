@@ -24,7 +24,7 @@ Sławek gives the example of a `Utils` class, which started innocently. After so
 
 Another example is a base class that "extracts" common code or common functionality, which is against the [Liskov substitution principle](https://en.wikipedia.org/wiki/Liskov_substitution_principle). Inheritance is not meant for extracting common logic.
 
-What does the object-oriented paradigm say? Inheritance is a technique that is supposed to support polymorphism. What is polymorphism? It is variable behaviors.
+What does the object-oriented paradigm say? Inheritance is a technique that is supposed to support polymorphism. What is polymorphism? It is a variable behavior.
 
 # Several Similar Screens
 

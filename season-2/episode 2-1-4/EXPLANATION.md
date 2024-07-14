@@ -6,7 +6,7 @@ This is simply naive modeling through the presentation layer.
 
 # Simple Projects vs. Complex Projects
 
-Kuba gives a good example. There are parts of projects where simple implementation through the user layer makes sense, but in the case of complex systems where for a particular method we need to perform several complex operations.
+Kuba gives a good example. There are parts of projects where simple implementation through the user layer makes sense, but in the case of complex systems for a particular method, we need to perform several complex operations.
 
 # Beginnings of a Young Programmer
 
