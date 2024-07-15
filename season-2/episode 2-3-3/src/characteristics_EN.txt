@@ -1,0 +1,23 @@
+
+private Object[] characteristics = new Object[]{2000d, 1000d, 1000d, 0.5d, 2500d, 4500d, 1500d, 0.5d, 5000d, 0.7d, 5000d, 5000d, 1500d, 2000d, 3000d, 6500d, 14d};
+
+index:
+0 - ECO mode - rpm whether to upshift during acceleration
+1 - ECO mode - rpm whether to downshift during acceleration
+2 - COMFORT mode - rpm whether to downshift during acceleration
+3 - COMFORT mode - throttle pedal pressure threshold before it is considered a kickdown
+4 - COMFORT mode - rpm whether to upshift during acceleration
+5 - COMFORT mode - rpm whether to downshift in kickdown
+6 - SPORT mode - rpm whether to downshift during acceleration
+7 - SPORT mode - throttle pedal pressure threshold for light acceleration
+8 - SPORT mode - rpm whether to upshift during light acceleration
+9 - SPORT mode - throttle pedal pressure threshold for light kickdown
+10 - SPORT mode - rpm whether to downshift in light kickdown
+11 - SPORT mode - rpm whether to downshift 2 gears in STRONG kickdown - flooring it...
+12 - ECO mode - rpm to downshift during braking
+13 - COMFORT mode - rpm to downshift during braking
+14 - SPORT mode - rpm to downshift during braking
+15 - ???
+17 - HIDDEN MODE - when to upshift during acceleration
+18 - HIDDEN MODE - when to downshift during acceleration in hidden mode
+19 - HIDDEN MODE - when to downshift during braking in hidden mode (probably)

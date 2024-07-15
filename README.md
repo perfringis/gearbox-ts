@@ -29,3 +29,4 @@ This repository constitutes a record of my learning process from the devupgrade.
   * [EPISODE 2.2.3 -> Explanation](https://github.com/perfringis/gearbox-ts/tree/main/season-2/episode%202-2-3)
   * [EPISODE 2.3.1 -> Requirement no. 3](https://github.com/perfringis/gearbox-ts/tree/main/season-2/episode%202-3-1)
   * [EPISODE 2.3.2 -> Analysis](https://github.com/perfringis/gearbox-ts/tree/main/season-2/episode%202-3-2)
+  * [EPISODE 2.3.3 -> Analysis](https://github.com/perfringis/gearbox-ts/tree/main/season-2/episode%202-3-3)
