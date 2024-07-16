@@ -35,3 +35,4 @@ This repository constitutes a record of my learning process from the devupgrade.
   * [EPISODE 2.4.2 -> Getters and Setters breaking encapsulation](https://github.com/perfringis/gearbox-ts/tree/main/season-2/episode%202-4-2)
   * [EPISODE 2.4.3 -> Explanation](https://github.com/perfringis/gearbox-ts/tree/main/season-2/episode%202-4-3)
   * [EPISODE 2.5.1 -> Requirement no. 5](https://github.com/perfringis/gearbox-ts/tree/main/season-2/episode%202-5-1)
+  * [EPISODE 2.5.2 -> exploding of case combination](https://github.com/perfringis/gearbox-ts/tree/main/season-2/episode%202-5-2)
