@@ -1,1 +1,0 @@
-CEO is hiring the consulting stuff to help with rewriting the code. 

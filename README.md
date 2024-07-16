@@ -40,3 +40,5 @@ This repository constitutes a record of my learning process from the devupgrade.
 - [LIVE STEAM Competition results](https://github.com/perfringis/gearbox-ts/tree/main/%5BLIVE%20STEAM%5D%20Competition%20results)
 - [SEASON 3](https://github.com/perfringis/gearbox-ts/tree/main/season-3)
   * [EPISODE 3.0.0 -> Introduction](https://github.com/perfringis/gearbox-ts/tree/main/season-3/episode%203-0-0)
+  * [EPISODE 3.1.1 -> CEO is making decisions](https://github.com/perfringis/gearbox-ts/tree/main/season-3/episode%203-1-1)
+  * [EPISODE 3.1.2 -> Trying to understand when we are changing the gear](https://github.com/perfringis/gearbox-ts/tree/main/season-3/episode%203-1-2)
