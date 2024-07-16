@@ -39,3 +39,4 @@ This repository constitutes a record of my learning process from the devupgrade.
   * [EPISODE 2.5.3 -> Explanation](https://github.com/perfringis/gearbox-ts/tree/main/season-2/episode%202-5-3)
 - [LIVE STEAM Competition results](https://github.com/perfringis/gearbox-ts/tree/main/%5BLIVE%20STEAM%5D%20Competition%20results)
 - [SEASON 3](https://github.com/perfringis/gearbox-ts/tree/main/season-3)
+  * [EPISODE 3.0.0 -> Introduction](https://github.com/perfringis/gearbox-ts/tree/main/season-3/episode%203-0-0)
