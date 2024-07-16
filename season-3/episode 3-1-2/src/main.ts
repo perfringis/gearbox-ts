@@ -1,6 +1,5 @@
 import { ExternalSystems } from "./ExternalSystems";
 import { Gearbox } from "./Gearbox";
-import { GearboxDriver } from "./GearboxDriver";
 
 class MyProgram {
   private readonly externalSystems: ExternalSystems = new ExternalSystems();
@@ -23,6 +22,5 @@ class MyProgram {
     }
   }
 }
-
 
 new MyProgram().main();
