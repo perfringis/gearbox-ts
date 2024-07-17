@@ -1,3 +1,5 @@
+import { RpmRange } from "./RpmRange";
+
 export class RPM {
   private rpm: number;
 
@@ -32,5 +34,13 @@ export class RPM {
     } else {
       return 0;
     }
+  }
+
+  isBellow(range: RpmRange): boolean {
+    return range.startGreaterThan(this);
+  }
+
+  isAbove(range: RpmRange): boolean {
+    return range.endSmallerThan(this);
   }
 }
