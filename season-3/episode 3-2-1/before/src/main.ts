@@ -15,7 +15,10 @@ class MyProgram {
     const currentGear: number = <number>this.gearbox.getCurrentGear();
     const maxDrive: number = this.gearbox.getMaxDrive();
 
-    const gear: number = new GearCalculator(minRpm, maxRpm, maxDrive).calculate(currentRpm, currentGear);
+    const gear: number = new GearCalculator(minRpm, maxRpm, maxDrive).calculate(
+      currentRpm,
+      currentGear
+    );
 
     this.gearbox.setCurrentGear(gear);
   }
