@@ -45,3 +45,4 @@ This repository constitutes a record of my learning process from the devupgrade.
   * [EPISODE 3.2.1 -> First extraction of business logic + first tests + value object RPM](https://github.com/perfringis/gearbox-ts/tree/main/season-3/episode%203-2-1)
   * [EPISODE 3.2.2 -> Introduce new value object Gear](https://github.com/perfringis/gearbox-ts/tree/main/season-3/episode%203-2-2)
   * [EPISODE 3.2.3 -> Introduce new value object RpmRange](https://github.com/perfringis/gearbox-ts/tree/main/season-3/episode%203-2-3)
+  * [EPISODE 3.2.4 -> Introduce new value object GearRange](https://github.com/perfringis/gearbox-ts/tree/main/season-3/episode%203-2-4)
