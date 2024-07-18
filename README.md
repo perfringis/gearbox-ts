@@ -48,3 +48,4 @@ This repository constitutes a record of my learning process from the devupgrade.
   * [EPISODE 3.2.4 -> Introduce new value object GearRange](https://github.com/perfringis/gearbox-ts/tree/main/season-3/episode%203-2-4)
   * [EPISODE 3.2.5 -> Refactor code, add an anti-corruption layer for Gearbox, ExternalSystems and Characteristics](https://github.com/perfringis/gearbox-ts/tree/main/season-3/episode%203-2-5)
   * [EPISODE 3.2.6 -> Stand-up](https://github.com/perfringis/gearbox-ts/tree/main/season-3/episode%203-2-6)
+- [LIVE STEAM Q&A #1](https://github.com/perfringis/gearbox-ts/tree/main/%5BLIVE%20STEAM%5D%20Competition%20results)
