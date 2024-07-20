@@ -53,5 +53,7 @@ This repository constitutes a record of my learning process from the devupgrade.
   * [EPISODE 4.1.2 -> Stand-up](https://github.com/perfringis/gearbox-ts/tree/main/season-3/episode%204-1-2)
   * [EPISODE 4.2.1 -> Tripartite division of logic](https://github.com/perfringis/gearbox-ts/tree/main/season-3/episode%204-2-1)
   * [EPISODE 4.2.2 -> Stand-up](https://github.com/perfringis/gearbox-ts/tree/main/season-3/episode%204-2-2)
+  * [EPISODE 4.3.1 -> Move chooseCalculator logic to separate class and first signs of Factory design pattern](https://github.com/perfringis/gearbox-ts/tree/main/season-3/episode%204-3-1)
+  * [EPISODE 4.3.2 -> Stand-up](https://github.com/perfringis/gearbox-ts/tree/main/season-3/episode%204-3-2)
 - [LIVE STEAM Competition results](https://github.com/perfringis/gearbox-ts/tree/main/%5BLIVE%20STEAM%5D%20Competition%20results)
 - [LIVE STEAM Q&A #1](https://github.com/perfringis/gearbox-ts/tree/main/%5BLIVE%20STEAM%5D%20Q%26A%20%231)
