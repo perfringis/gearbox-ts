@@ -1,0 +1,9 @@
+# EN
+
+Kuba, we need to quickly add an additional feature. Can you manage to put it on the demo before I get to the client? Look! It turned out we're adding a new mode. There's this mode, umm, dynamic (m-dynamic mode). Now something happened. At the back, we have an electronically controlled variable slip differential. There are these clutches, which while you're in a slide, determine the slip level of the left and right side so you can stay in the drift as long as possible. So listen. The client came up with the idea that in such a mode, when you're in a slide, which you will probably be able to detect based on some angular velocities and so on. So, when you're in a slide, the gearbox shouldn't interfere in any way with changing the gear (neither up nor down). Simply so he could calmly. Oh, see how now, right. We're doing something like this. Bam. Slide, and it has no right to change the gear on me. Clear? Simple! Get to work. Bye for now.
+
+Translated by ChatGPT.
+
+# PL
+
+Kuba dodatkowy feature musimy dodać tak na szybko. Dałbyś radę wrzucić to na demo zanim dojadę do klienta? Bo patrz! Okazało się, że dodajemy nowy tryb. Jest taki tryb, yyyy dynamiczny(m-dynamic mode). Teraz coś się stało. Z tyłu mamy dyferencjał o zmiennym poziomie ślizgu sterowany elektronicznie. Tam są takie sprzęgiełka, które w trakcie gdy jesteś w ślizgu. Ustalają poziom uślizgu lewej prawej strony tak żebyś mógł jak najdłużej być w drifcie. No i słuchaj. Klient sobie wymyślił, że w takim trybie. Gdy jesteś w ślizgu, czyli będziecie to w stanie to wykryć prawdopodobnie na podstawie jakiś tam predkosci katowej i tak dalej. Czyli, gdy jesteś w ślizgu no to skrzynia nie powinna ingerować w zaden sposob w zmiane biegu(ani na wyższy ani na niższy). Po prostu dlatego mógł sobie spokojnie. O zobacz jak teraz, nie. Robimy coś takiego. Pach. Uślizg i nie ma prawa mi zmienic biegu. Jasne? Proste! Do roboty. Narazie.

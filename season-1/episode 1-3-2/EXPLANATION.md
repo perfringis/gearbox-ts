@@ -1,4 +1,5 @@
 # When We Mock, Mock, and Mock Again
+
 Generally, it can be overwhelmingly felt that testing is wrong when we repeatedly perform the entire ceremony of preparing mocks to test a simple thing. What does such a test verify if it has the implementation of mock, mock, mock, and mock again? If the testing library works well, we should only test the part of the functionality that interests us.
 
 # Visualization
@@ -13,6 +14,7 @@ In the case of a query, we can ask someone 30 times about their age. Each time, 
 3. For this arrow. Just like for arrow number one. Here, we perform a simple query. Give me the position of the lights or give me the current state of the rotation unit of measure.
 
 # Command–Query Separation
+
 Command-query separation was created by Bertrand Meyer as part of his work on the Eiffel programming language. The main task of this approach is to define methods that can be assigned the characteristics of a query or a command. A command is often used nowadays in other architectural solutions, so for our purposes, we can say instead of command, a modifier. It more accurately conveys the meaning.
 
 More information here:
@@ -22,65 +24,90 @@ More information here:
 [Martin Fowler blog post](https://martinfowler.com/bliki/CommandQuerySeparation.html)
 
 ## Query
+
 This is a method that tries to obtain information from an object. It does not modify the object to which it directs its query. It simply expects the same value for each query to that object. A query does not modify the state of the object.
 
-## Command (modifier)
+## Command (better name -> modifier)
+
 This is a method that is required to change the state of a given object. Such a command does not return any value.
 
 # Gear Shift Frequency
+
 Later in the course, Sławek and Kuba will try to implement tracking the frequency of gear shifts.
 
 # White-Box Test
+
 In testing theory, such a test is considered a smell. A white-box test is characterized by very high "fragility". Every new implementation change causes the rewriting of tests.
 
 # Black-Box Test
+
 Since we are confronted with reality and white-box tests, how can we otherwise rewrite the given test into a black-box test? Where can we start?
 
 # Approach to Changing a Test from White-Box to Black-Box
+
 The header `given` gives me a car in some state. I hide this in one place. 150 tests can use this one method. When the way the car is prepared suddenly changes, we change the method implementation.
 
 # What Does Our `GearboxDriver` Code Do?
+
 1. It interacts with technical objects. With the `Gearbox` and `ExternalSystems` classes.
 2. The `GearboxDriver` class has its own logic. That is, it has a set of ifs that affect the `Gearbox` class.
 
 # Kuba's Suggestion
+
 Extract the logic into a separate box and start testing only that box.
 
 ![](./screen-2.png)
 
-# Explanation of Terms Mock, Stub, Spy
+# Explanation of Terms: Dummy, Stub, Spy, Mock and Fake
 
 ## Test Double
-Test double - when we want to replace some dependency in a class. In our example, if we are testing `GearboxDriver`, then a double would be, for example, `Gearbox`.
 
-### Stub
-A stub is taught to return some results to us.
+The name refers to stunt doubles and stand-ins used in films. It is simply a general name referring to all types of "faking" dependencies.
 
-Example from episode 1-3-1
+We distinguish 5 types:
 
-```typescript
-when(gearbox.getState()).thenReturn(1);
-```
+1. Dummy.
+2. Stub.
+3. Spy.
+4. Mock.
+5. Fake.
 
-### Mock
-We use a mock when some operations have been performed on an object. We examine the number of executions and so on.
+![](./screen-3.png)
 
-## Types of Mocks
-Mocks are divided into spies and mocks.
+## Mock vs Stub
 
-### Spy
-This is a manually written mock. Often, a spy can intercept a signal from one object to another.
+Mocks help simulate and analyze outgoing interactions. This concerns actions that the system under test takes on its dependencies to change their state.
 
-### Mock
-We check how many times something was executed.
+Stubs allow for simulating incoming interactions. This concerns actions that the system under test takes on its dependencies to obtain input data.
 
-## Stub Division into Fake, Dummy, and Stub
+## Spy
+
+A Spy plays the same role as a Mock. The difference is that a Spy's implementation is written manually, while Mocks are generated using a testing library.
+
+# Stub, Dummy, Fake
+
+The differences between Stub, Dummy, and Fake come down to how intelligent the mechanism is.
+
+# Dummy
+
+A Dummy is a simple hard-coded value, e.g., a null value or a made-up string. It is used to satisfy method declaration conditions and does not contribute to the final effect.
+
+# Stub
+
+A Stub is a more complex mechanism. It is a full dependency that requires configuration to return different values in different situations.
+
+# Fake
+
+A Fake is largely the same as a Stub, but it has one difference. The difference lies in the reason for its creation. A Fake is usually used to replace a dependency that has not yet been created.
 
 # Rule of Thumb
+
 If we have a command, I will definitely want to mock it. I will be interested in how many times it was executed? How many times did the gear change?
 
 # Do Not Take Command-Query Separation Literally
+
 It is not good when a command returns the state of an object, but it is good when it returns the result of an operation.
 
 # Sometimes Mocking Queries Makes Sense
+
 Mocking a query makes sense when we use an external API that costs money. Another reason is asking about processor resources.
