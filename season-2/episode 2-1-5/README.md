@@ -1,3 +1,27 @@
+# What changed?
+
+## main.ts
+
+```diff
++import { ExternalSystems } from "./ExternalSystems";
++import { Gearbox } from "./Gearbox";
++import { GearboxDriver } from "./GearboxDriver";
++
++let driver: GearboxDriver = new GearboxDriver();
++let gearbox: Gearbox = new Gearbox();
++let externalSystems: ExternalSystems = new ExternalSystems();
++gearbox.setCurrentGear(3);
++gearbox.setGearBoxCurrentParams([4, 3]);
++externalSystems.setCurrentRpm(3000);
++driver.setGearbox(gearbox);
++driver.setExternalSystems(externalSystems);
++
++driver.handleGas();
+```
+
+## GearboxDriver.ts
+
+```diff
 import { ExternalSystems } from "./ExternalSystems";
 import { Gearbox } from "./Gearbox";
 
@@ -9,25 +33,25 @@ export class GearboxDriver {
   private externalSystems!: ExternalSystems;
 
   handleGas(): void {
-    if (<number>this.gearbox.getState() === 2) {
+    if (<number>this.gearbox.getState() == 2) {
       return;
     }
 
-    if (<number>this.gearbox.getState() === 3) {
+    if (<number>this.gearbox.getState() == 3) {
       return;
     }
 
-    if (<number>this.gearbox.getState() === 4) {
+    if (<number>this.gearbox.getState() == 4) {
       return;
     }
 
     let currentRpm: number = this.externalSystems.getCurrentRpm();
-    
     if (currentRpm > <number>this.characteristics[0]) {
       if (this.gearbox.getMaxDrive() >= <number>this.gearbox.getCurrentGear()) {
         return;
       }
 
++      console.log("No reduction");
       this.gearbox.setCurrentGear(<number>this.gearbox.getCurrentGear() + 1);
     }
 
@@ -36,6 +60,7 @@ export class GearboxDriver {
         return;
       }
 
++      console.log("No reduction");
       this.gearbox.setCurrentGear(<number>this.gearbox.getCurrentGear() - 1);
     }
   }
@@ -56,3 +81,5 @@ export class GearboxDriver {
     this.externalSystems = value;
   }
 }
+
+```

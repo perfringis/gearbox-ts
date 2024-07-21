@@ -1,0 +1,15 @@
+# EN
+
+It's Saturday, and I'm exceptionally sitting in the office because I need to put in some overtime, but even the boss has let me use his room, so that's nice. This is an unusual situation; it's the first time he has underestimated the requirements. I can devote one weekend to this. I'm trying to model this system for the gearbox, but I'm not really sure how the relationships between the objects should look, so I think I'll take the car out for lunch and observe in real-time how it should work. That will be the easiest way. By the way, I'll buy some cloths because the boss wanted me to tidy up here as well.
+
+From the user interface, it's clear that when I press the gas pedal, the gear changes. When I press the brake, the gear changes. So, these underlying objects must be connected. There's no other way. I see three objects here: the gas pedal, the brake pedal, and a reference to the gearbox, or possibly just one object for the gearbox with a handleGas method and a handleBrake method.
+
+Now everything is clear. I know how to model everything. Here on the boss's monitor, I'll have to write very short methods and short names because the monitor is old and small, but the most important thing is that I know how it should work. Oh, the boss is calling. Yes, hello, good morning. Yes, I bought those coconut ones. Overtime can't be accounted for? Alright, that's fine. I was only here for 3 hours. Okay, let's leave it and we'll sort it out another time. A present in the cupboard instead? Okay, I'll take it out. Thanks, goodbye.
+
+# PL
+
+Jest sobota wyjątkowo siedzę w biurze bo trzeba zrobić trochę nadgodzin, ale nawet szef mi udostępnił swój pokój, więc fajnie. To jest wyjątkowa sytuacja pierwszy raz zdarzyło mu sie niedoestymować wymagań. jeden weekend moge poswiecic. Staram sie modelować ten system do skrzyni biegow, ale nie za bardzo wiem jak te relacje między obiektami maja wygladac, wiec chyba przejade sie na obiad samochodem i normalnie na żywym organizmie zobacze jak to powinno działać. Tak będzie najłatwiej. Przy okazji kupie scierki, bo szef chciał, zebym tez tutaj ogarnął.
+
+Z interfejsu użytkownika to jasno wynika, że naciskam gaz. Zmienia sie bieg. Naciskam hamulec, zmienia sie bieg. Czyli te obiekty pod spodem muszą być połączone. Nie ma siły. Ja tu widzę trzy obiekty: pedał gazu, pedał hamulca, referencja do gearbox, albo ewentualnie taki jeden obiekt gearbox i handle gas metoda. handleBreak metoda.
+
+No i teraz wszystko jest jasne. Wiem jak juz wszystko zamodelować. Tu u szefa na monitorze, bede musial pisac bardzo krotkie metody i krótkie nazwy, bo monitor jest stary i mały, no ale najważniejsze, że wiem jak to powinno działać. No właśnie szef dzwoni. Tak halo dzień dobry. Tak te kokosowe kupiłem. Nie da sie rozliczyc nadgodzin? Dobra to jest raz. Ja tutaj byłem tylko 3 godziny. Dobra to sobie odpuśćmy jakoś innym razem sie dogadamy. Prezent w szafce zamiast tego? Dobra wyciągnę sobie. Dzięki, do widzenia.
