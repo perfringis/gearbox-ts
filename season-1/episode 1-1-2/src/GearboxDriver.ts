@@ -1,7 +1,7 @@
 import { ExternalSystems } from "./ExternalSystems";
 import { Gearbox } from "./Gearbox";
 
-class GearboxDriver {
+export class GearboxDriver {
   private externalSystems: ExternalSystems = new ExternalSystems();
   private gearbox: Gearbox = new Gearbox();
 

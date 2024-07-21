@@ -2,7 +2,7 @@ import { ExternalSystems } from "../src/ExternalSystems";
 import { Gearbox } from "../src/Gearbox";
 import { GearboxDriver } from "../src/GearboxDriver";
 
-import { mock, instance, when, verify, _ } from "@johanblumenberg/ts-mockito";
+import { mock, when, _ } from "@johanblumenberg/ts-mockito";
 import { Lights } from "../src/Lights";
 
 describe("Testing the gearbox driver", () => {

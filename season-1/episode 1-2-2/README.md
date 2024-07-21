@@ -1,3 +1,6 @@
+# What changed?
+
+```diff
 import { ExternalSystems } from "./ExternalSystems";
 import { Gearbox } from "./Gearbox";
 
@@ -5,7 +8,7 @@ export class GearboxDriver {
   private externalSystems: ExternalSystems = new ExternalSystems();
   private gearbox: Gearbox = new Gearbox();
 
-  private ifCaravan!: boolean;
++  private ifCaravan!: boolean;
 
   // prettier-ignore
   private characteristics: Object[] = [2000, 1000, 1000, 0.5, 2500, 4500, 1500, 0.5, 5000, 0.7, 5000, 5000, 1500, 2000, 3000, 6500, 14];
@@ -51,18 +54,18 @@ export class GearboxDriver {
     switch (this.gearBoxDriverMode) {
       case 1: {
         // prettier-ignore
-        if (this.ifCaravan && this.externalSystems.getLights().getLightsPosition() != null && this.externalSystems.getLights().getLightsPosition() >= 7) {
-          if (currentGear != 1) {
-            this.gearbox.setCurrentGear(currentGear - 1);
-          }
-        }
++        if (this.ifCaravan && this.externalSystems.getLights().getLightsPosition() != null && this.externalSystems.getLights().getLightsPosition() >= 7) {
++          if (currentGear != 1) {
++            this.gearbox.setCurrentGear(currentGear - 1);
++          }
++        }
 
         // prettier-ignore
-        if (this.ifCaravan && this.externalSystems.getLights().getLightsPosition() != null && this.externalSystems.getLights().getLightsPosition() <= 3) {
-          if (currentGear != 1) {
-            this.gearbox.setCurrentGear(currentGear - 1);
-          }
-        }
++        if (this.ifCaravan && this.externalSystems.getLights().getLightsPosition() != null && this.externalSystems.getLights().getLightsPosition() <= 3) {
++          if (currentGear != 1) {
++            this.gearbox.setCurrentGear(currentGear - 1);
++          }
++        }
 
         // prettier-ignore
         if (this.isMDynamicsMode && this.externalSystems.getAngularSpeed() > 50) {
@@ -93,18 +96,18 @@ export class GearboxDriver {
 
       case 2: {
         // prettier-ignore
-        if (this.ifCaravan && this.externalSystems.getLights().getLightsPosition() != null && this.externalSystems.getLights().getLightsPosition() >= 7) {
-          if (currentGear != 1) {
-            this.gearbox.setCurrentGear(currentGear - 1);
-          }
-        }
++        if (this.ifCaravan && this.externalSystems.getLights().getLightsPosition() != null && this.externalSystems.getLights().getLightsPosition() >= 7) {
++          if (currentGear != 1) {
++            this.gearbox.setCurrentGear(currentGear - 1);
++          }
++        }
 
         // prettier-ignore
-        if (this.ifCaravan && this.externalSystems.getLights().getLightsPosition() != null && this.externalSystems.getLights().getLightsPosition() <= 3) {
-          if (currentGear != 1) {
-            this.gearbox.setCurrentGear(currentGear - 1);
-          }
-        }
++        if (this.ifCaravan && this.externalSystems.getLights().getLightsPosition() != null && this.externalSystems.getLights().getLightsPosition() <= 3) {
++          if (currentGear != 1) {
++            this.gearbox.setCurrentGear(currentGear - 1);
++          }
++        }
 
         // prettier-ignore
         if (this.isMDynamicsMode && this.externalSystems.getAngularSpeed() > 50) {
@@ -159,18 +162,18 @@ export class GearboxDriver {
 
       case 3: {
         // prettier-ignore
-        if (this.ifCaravan && this.externalSystems.getLights().getLightsPosition() != null && this.externalSystems.getLights().getLightsPosition() >= 7) {
-          if (currentGear != 1) {
-            this.gearbox.setCurrentGear(currentGear - 1);
-          }
-        }
++        if (this.ifCaravan && this.externalSystems.getLights().getLightsPosition() != null && this.externalSystems.getLights().getLightsPosition() >= 7) {
++          if (currentGear != 1) {
++            this.gearbox.setCurrentGear(currentGear - 1);
++          }
++        }
 
         // prettier-ignore
-        if (this.ifCaravan && this.externalSystems.getLights().getLightsPosition() != null && this.externalSystems.getLights().getLightsPosition() <= 3) {
-          if (currentGear != 1) {
-            this.gearbox.setCurrentGear(currentGear - 1);
-          }
-        }
++        if (this.ifCaravan && this.externalSystems.getLights().getLightsPosition() != null && this.externalSystems.getLights().getLightsPosition() <= 3) {
++          if (currentGear != 1) {
++            this.gearbox.setCurrentGear(currentGear - 1);
++          }
++        }
 
         // prettier-ignore
         if (this.isMDynamicsMode && this.externalSystems.getAngularSpeed() > 50) {
@@ -229,3 +232,9 @@ export class GearboxDriver {
     }
   }
 }
+
+```
+
+# Class diagram
+
+![](./class-diagram.png)

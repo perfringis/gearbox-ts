@@ -189,3 +189,7 @@ class GearboxDriver {
   }
 }
 ```
+
+# Class diagram
+
+![](./class-diagram.png)
