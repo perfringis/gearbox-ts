@@ -13,7 +13,7 @@ class GearboxDriver {
 
   private gearBoxDriverMode!: number; // mode 1-Eco, 2-Comfort, 3-Sport
 
-  +private isMDynamicsMode!: boolean;
++  private isMDynamicsMode!: boolean;
 
   private aggressiveMode!: number; // 1-3
 
@@ -52,9 +52,9 @@ class GearboxDriver {
     switch (this.gearBoxDriverMode) {
       case 1: {
         // prettier-ignore
-        if (this.isMDynamicsMode && this.externalSystems.getAngularSpeed() > 50) {
-          break;
-        }
++        if (this.isMDynamicsMode && this.externalSystems.getAngularSpeed() > 50) {
++          break;
++        }
 
         // prettier-ignore
         if (currentRpm > <number>this.characteristics[0] && this.aggressiveMode === 1) {
@@ -80,9 +80,9 @@ class GearboxDriver {
 
       case 2: {
         // prettier-ignore
-        if (this.isMDynamicsMode && this.externalSystems.getAngularSpeed() > 50) {
-          break;
-        }
++        if (this.isMDynamicsMode && this.externalSystems.getAngularSpeed() > 50) {
++          break;
++        }
 
         // prettier-ignore
         if (currentRpm < <number>this.characteristics[2]) { // czy redukowac bo za male obroty
@@ -132,9 +132,9 @@ class GearboxDriver {
 
       case 3: {
         // prettier-ignore
-        if (this.isMDynamicsMode && this.externalSystems.getAngularSpeed() > 50) {
-          break;
-        }
++        if (this.isMDynamicsMode && this.externalSystems.getAngularSpeed() > 50) {
++          break;
++        }
 
         // prettier-ignore
         if (currentRpm < <number>this.characteristics[6]) { // czy zbyt obroty i trzeba zredukowac
@@ -188,5 +188,4 @@ class GearboxDriver {
     }
   }
 }
-
 ```
