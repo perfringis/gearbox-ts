@@ -1,3 +1,30 @@
+# What changed?
+
+# main.ts
+
+```diff
+import { ExternalSystems } from "./ExternalSystems";
+import { Gearbox } from "./Gearbox";
+import { GearboxDriver } from "./GearboxDriver";
+
+let driver: GearboxDriver = new GearboxDriver();
+let gearbox: Gearbox = new Gearbox();
+let externalSystems: ExternalSystems = new ExternalSystems();
+gearbox.setCurrentGear(3);
+gearbox.setMaxDrive(8);
+gearbox.setGearBoxCurrentParams([1, 3]);
+externalSystems.setCurrentRpm(3000);
+driver.setGearbox(gearbox);
+driver.setExternalSystems(externalSystems);
+
+driver.handleGas(5);
+
++driver.setGear(<number>driver.getGearbox().getCurrentGear() - 1);
+```
+
+# GearboxDriver.ts
+
+```diff
 import { ExternalSystems } from "./ExternalSystems";
 import { Gearbox } from "./Gearbox";
 
@@ -13,8 +40,6 @@ export class GearboxDriver {
 
   private gearbox!: Gearbox;
   private externalSystems!: ExternalSystems;
-
-  aggressiveMode: number = 1;
 
   private mode: DriverMode = DriverMode.Comfort;
 
@@ -56,32 +81,30 @@ export class GearboxDriver {
         break;
       }
       case DriverMode.Comfort: {
-        // prettier-ignore
         if (threshold < 0.5) {
-          if (currentRpm > <number>this.characteristics[2] && this.aggressiveMode === 1) {
-            if (this.gearbox.getMaxDrive() >= <number>this.gearbox.getCurrentGear()) {
-              this.gearbox.setCurrentGear(<number>this.gearbox.getCurrentGear() + 1);
-              console.log("No reduction");
-            }
-          } else if (currentRpm > (<number>this.characteristics[2] * 120) / 100 && this.aggressiveMode === 2) {
-            if (this.gearbox.getMaxDrive() >= <number>this.gearbox.getCurrentGear()) {
-              this.gearbox.setCurrentGear(<number>this.gearbox.getCurrentGear() + 1);
-              console.log("No reduction");
-            }
-          } else if (currentRpm > (<number>this.characteristics[2] * 130) / 100 && this.aggressiveMode === 3) {
-            if (this.gearbox.getMaxDrive() >= <number>this.gearbox.getCurrentGear()) {
-              this.gearbox.setCurrentGear(<number>this.gearbox.getCurrentGear() + 1);
+          if (currentRpm > <number>this.characteristics[2]) {
+            if (
+              this.gearbox.getMaxDrive() >=
+              <number>this.gearbox.getCurrentGear()
+            ) {
+              this.gearbox.setCurrentGear(
+                <number>this.gearbox.getCurrentGear() + 1
+              );
               console.log("No reduction");
             }
           } else if (currentRpm > <number>this.characteristics[3]) {
             if (<number>this.gearbox.getCurrentGear() != 1) {
-              this.gearbox.setCurrentGear(<number>this.gearbox.getCurrentGear() - 1);
+              this.gearbox.setCurrentGear(
+                <number>this.gearbox.getCurrentGear() - 1
+              );
               console.log("Reduction");
             }
           }
         } else {
           if (<number>this.gearbox.getCurrentGear() != 1) {
-            this.gearbox.setCurrentGear(<number>this.gearbox.getCurrentGear() - 1);
+            this.gearbox.setCurrentGear(
+              <number>this.gearbox.getCurrentGear() - 1
+            );
             console.log("Reduction");
           }
         }
@@ -89,41 +112,43 @@ export class GearboxDriver {
         break;
       }
       case DriverMode.Sport: {
-        // prettier-ignore
         if (threshold <= 0.5) {
-          if (currentRpm > <number>this.characteristics[6] && this.aggressiveMode === 1) {
-            if (this.gearbox.getMaxDrive() >= <number>this.gearbox.getCurrentGear()) {
-              this.gearbox.setCurrentGear(<number>this.gearbox.getCurrentGear() + 1);
-              console.log("No reduction");
-            }
-          } else if (currentRpm > (<number>this.characteristics[6] * 120) / 100 && this.aggressiveMode === 2) {
-            if (this.gearbox.getMaxDrive() >= <number>this.gearbox.getCurrentGear()) {
-              this.gearbox.setCurrentGear(<number>this.gearbox.getCurrentGear() + 1);
-              console.log("No reduction");
-            }
-          } else if (currentRpm > (<number>this.characteristics[6] * 130) / 100 && this.aggressiveMode === 3) {
-            if (this.gearbox.getMaxDrive() >= <number>this.gearbox.getCurrentGear()) {
-              this.gearbox.setCurrentGear(<number>this.gearbox.getCurrentGear() + 1);
+          if (currentRpm > <number>this.characteristics[6]) {
+            if (
+              this.gearbox.getMaxDrive() >=
+              <number>this.gearbox.getCurrentGear()
+            ) {
+              this.gearbox.setCurrentGear(
+                <number>this.gearbox.getCurrentGear() + 1
+              );
               console.log("No reduction");
             }
           } else if (currentRpm > <number>this.characteristics[7]) {
             if (<number>this.gearbox.getCurrentGear() != 1) {
-              this.gearbox.setCurrentGear(<number>this.gearbox.getCurrentGear() - 1);
+              this.gearbox.setCurrentGear(
+                <number>this.gearbox.getCurrentGear() - 1
+              );
               console.log("Reduction");
             }
           }
         } else if (threshold > 0.5) {
           if (<number>this.gearbox.getCurrentGear() != 1) {
-            this.gearbox.setCurrentGear(<number>this.gearbox.getCurrentGear() - 1);
+            this.gearbox.setCurrentGear(
+              <number>this.gearbox.getCurrentGear() - 1
+            );
             console.log("Reduction");
           }
         } else if (threshold > 0.7) {
           if (<number>this.gearbox.getCurrentGear() != 1) {
-            this.gearbox.setCurrentGear(<number>this.gearbox.getCurrentGear() - 1);
+            this.gearbox.setCurrentGear(
+              <number>this.gearbox.getCurrentGear() - 1
+            );
             console.log("Reduction");
           }
           if (<number>this.gearbox.getCurrentGear() != 1) {
-            this.gearbox.setCurrentGear(<number>this.gearbox.getCurrentGear() - 1);
+            this.gearbox.setCurrentGear(
+              <number>this.gearbox.getCurrentGear() - 1
+            );
             console.log("Reduction");
           }
         }
@@ -149,15 +174,21 @@ export class GearboxDriver {
     this.externalSystems = value;
   }
 
-  public setGear(gear: number): void {
-    if (this.gearbox.getMaxDrive() < gear) {
-      return;
-    }
++  public setGear(gear: number): void {
++    if (this.gearbox.getMaxDrive() < gear) {
++      return;
++    }
++
++    if (gear < 1) {
++      return;
++    }
++
++    this.gearbox.setCurrentGear(gear);
++  }
++}
 
-    if (gear < 1) {
-      return;
-    }
+```
 
-    this.gearbox.setCurrentGear(gear);
-  }
-}
+# class diagram
+
+![](./class-diagram.png)

@@ -1,1 +1,0 @@
-Te sobotnie nadgodziny zawsze dają mi dużo przemyśleń. Nie rozumiem za bardzo tej funkcji kickdown. No bo naciskam gaz. Faktycznie robię kickdown. Czyli kopie tak? I nic sie nie dzieje. No i nic sie nie dzieje. Nie ma tej podwójnej redukcji. Może tryby trzeba pozmieniac? Tutaj? O! Sport. O! Zadziałało! Wcześniej nie wiedziałem, bo ojciec nigdy nie pozwala wrzucać tego trybu.

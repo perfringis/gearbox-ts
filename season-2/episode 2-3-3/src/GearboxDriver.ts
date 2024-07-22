@@ -33,20 +33,15 @@ export class GearboxDriver {
 
     switch (this.mode) {
       case DriverMode.Eco: {
+        // prettier-ignore
         if (currentRpm > <number>this.characteristics[0]) {
-          if (
-            this.gearbox.getMaxDrive() >= <number>this.gearbox.getCurrentGear()
-          ) {
-            this.gearbox.setCurrentGear(
-              <number>this.gearbox.getCurrentGear() + 1
-            );
+          if (this.gearbox.getMaxDrive() >= <number>this.gearbox.getCurrentGear()) {
+            this.gearbox.setCurrentGear(<number>this.gearbox.getCurrentGear() + 1);
             console.log("No reduction");
           }
         } else if (currentRpm > <number>this.characteristics[1]) {
           if (<number>this.gearbox.getCurrentGear() != 1) {
-            this.gearbox.setCurrentGear(
-              <number>this.gearbox.getCurrentGear() - 1
-            );
+            this.gearbox.setCurrentGear(<number>this.gearbox.getCurrentGear() - 1);
             console.log("Reduction");
           }
         }
@@ -54,30 +49,22 @@ export class GearboxDriver {
         break;
       }
       case DriverMode.Comfort: {
+        // prettier-ignore
         if (threshold < 0.5) {
           if (currentRpm > <number>this.characteristics[2]) {
-            if (
-              this.gearbox.getMaxDrive() >=
-              <number>this.gearbox.getCurrentGear()
-            ) {
-              this.gearbox.setCurrentGear(
-                <number>this.gearbox.getCurrentGear() + 1
-              );
+            if (this.gearbox.getMaxDrive() >= <number>this.gearbox.getCurrentGear()) {
+              this.gearbox.setCurrentGear(<number>this.gearbox.getCurrentGear() + 1);
               console.log("No reduction");
             }
           } else if (currentRpm > <number>this.characteristics[3]) {
             if (<number>this.gearbox.getCurrentGear() != 1) {
-              this.gearbox.setCurrentGear(
-                <number>this.gearbox.getCurrentGear() - 1
-              );
+              this.gearbox.setCurrentGear(<number>this.gearbox.getCurrentGear() - 1);
               console.log("Reduction");
             }
           }
         } else {
           if (<number>this.gearbox.getCurrentGear() != 1) {
-            this.gearbox.setCurrentGear(
-              <number>this.gearbox.getCurrentGear() - 1
-            );
+            this.gearbox.setCurrentGear(<number>this.gearbox.getCurrentGear() - 1);
             console.log("Reduction");
           }
         }
@@ -85,43 +72,31 @@ export class GearboxDriver {
         break;
       }
       case DriverMode.Sport: {
+        // prettier-ignore
         if (threshold <= 0.5) {
           if (currentRpm > <number>this.characteristics[6]) {
-            if (
-              this.gearbox.getMaxDrive() >=
-              <number>this.gearbox.getCurrentGear()
-            ) {
-              this.gearbox.setCurrentGear(
-                <number>this.gearbox.getCurrentGear() + 1
-              );
+            if (this.gearbox.getMaxDrive() >= <number>this.gearbox.getCurrentGear()) {
+              this.gearbox.setCurrentGear(<number>this.gearbox.getCurrentGear() + 1);
               console.log("No reduction");
             }
           } else if (currentRpm > <number>this.characteristics[7]) {
             if (<number>this.gearbox.getCurrentGear() != 1) {
-              this.gearbox.setCurrentGear(
-                <number>this.gearbox.getCurrentGear() - 1
-              );
+              this.gearbox.setCurrentGear(<number>this.gearbox.getCurrentGear() - 1);
               console.log("Reduction");
             }
           }
         } else if (threshold > 0.5) {
           if (<number>this.gearbox.getCurrentGear() != 1) {
-            this.gearbox.setCurrentGear(
-              <number>this.gearbox.getCurrentGear() - 1
-            );
+            this.gearbox.setCurrentGear(<number>this.gearbox.getCurrentGear() - 1);
             console.log("Reduction");
           }
         } else if (threshold > 0.7) {
           if (<number>this.gearbox.getCurrentGear() != 1) {
-            this.gearbox.setCurrentGear(
-              <number>this.gearbox.getCurrentGear() - 1
-            );
+            this.gearbox.setCurrentGear(<number>this.gearbox.getCurrentGear() - 1);
             console.log("Reduction");
           }
           if (<number>this.gearbox.getCurrentGear() != 1) {
-            this.gearbox.setCurrentGear(
-              <number>this.gearbox.getCurrentGear() - 1
-            );
+            this.gearbox.setCurrentGear(<number>this.gearbox.getCurrentGear() - 1);
             console.log("Reduction");
           }
         }
