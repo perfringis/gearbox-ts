@@ -1,6 +1,6 @@
 # Code Improvement
 
-Slawek and Kuba act as consultants. They don't know what the client's domain is about.
+Sławek and Kuba act as consultants. They don't know what the client's domain is about.
 
 # Bottom-up Analysis
 

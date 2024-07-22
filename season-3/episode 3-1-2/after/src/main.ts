@@ -1,7 +1,7 @@
 import { ExternalSystems } from "./ExternalSystems";
 import { Gearbox } from "./Gearbox";
 
-class BlaBla {
+export class BlaBla {
   private minRpm: number;
   private maxRpm: number;
   private maxDrive: number;
@@ -31,7 +31,7 @@ class BlaBla {
   }
 }
 
-class MyProgram {
+export class MyProgram {
   private readonly externalSystems: ExternalSystems = new ExternalSystems();
   // prettier-ignore
   private readonly characteristics: Object[] = [2000, 1000, 1000, 0.5, 2500, 4500, 1500, 0.5, 5000, 0.7, 5000, 5000, 1500, 2000, 3000, 6500];

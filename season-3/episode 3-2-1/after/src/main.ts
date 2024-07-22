@@ -3,7 +3,7 @@ import { Gearbox } from "./Gearbox";
 import { GearCalculator } from "./GearCalculator";
 import { RPM } from "./RPM";
 
-class MyProgram {
+export class MyProgram {
   private readonly externalSystems: ExternalSystems = new ExternalSystems();
   // prettier-ignore
   private readonly characteristics: Object[] = [2000, 1000, 1000, 0.5, 2500, 4500, 1500, 0.5, 5000, 0.7, 5000, 5000, 1500, 2000, 3000, 6500];

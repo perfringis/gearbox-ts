@@ -5,7 +5,6 @@ enum DriverMode {
   Eco,
   Comfort,
   Sport,
-  Aggressive,
 }
 
 export class GearboxDriver {
