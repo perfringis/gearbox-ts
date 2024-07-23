@@ -64,6 +64,6 @@ This repository constitutes a record of my learning process from the devupgrade.
   * [EPISODE 5.3.1 -> Funny analysis of BMW M2 Competition](https://github.com/perfringis/gearbox-ts/tree/main/season-3/episode%205-2-1)
 - [SEASON 6](https://github.com/perfringis/gearbox-ts/tree/main/season-6)
   * [EPISODE 6.1.0 -> Introduction](https://github.com/perfringis/gearbox-ts/tree/main/season-3/episode%206-1-0)
-  * [EPISODE 6.2.0 -> Introduction](https://github.com/perfringis/gearbox-ts/tree/main/season-3/episode%206-1-0)
+  * [EPISODE 6.2.0 -> Introduction](https://github.com/perfringis/gearbox-ts/tree/main/season-3/episode%206-2-0)
 - [LIVE STEAM Competition results](https://github.com/perfringis/gearbox-ts/tree/main/%5BLIVE%20STEAM%5D%20Competition%20results)
 - [LIVE STEAM Q&A #1](https://github.com/perfringis/gearbox-ts/tree/main/%5BLIVE%20STEAM%5D%20Q%26A%20%231)
