@@ -4,14 +4,14 @@ export class Gear {
   constructor(numRepresentation: number) {
     // prettier-ignore
     if (numRepresentation < 0) {
-      throw new Error(`Invalid numeric representation: ${this.numRepresentation}`);
+      throw new Error(`Invalid numeric representation: ${numRepresentation}`);
     }
 
     this.numRepresentation = numRepresentation;
   }
 
-  greaterThan(gear: Gear): boolean {
-    return this.numRepresentation > gear.numRepresentation;
+  greaterThan(other: Gear): boolean {
+    return this.numRepresentation > other.numRepresentation;
   }
 
   lessOrEqualTo(gear: Gear): boolean {

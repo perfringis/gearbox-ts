@@ -7,7 +7,7 @@ export class GearRange {
   constructor(first: Gear, maxGear: Gear) {
     // prettier-ignore
     if (first.greaterThan(maxGear)) {
-      throw new Error(`Invalid Range. ${this.first} is greater than ${maxGear}`);
+      throw new Error(`Invalid Range. ${first.toIntValue()} is greater than ${maxGear.toIntValue()}`);
     }
 
     this.first = first;

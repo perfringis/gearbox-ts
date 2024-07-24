@@ -2,6 +2,8 @@ import { Characteristics } from "./carspecific/bmw/Characteristics";
 import { GearboxACL } from "./GearboxACL";
 import { OptimalRange } from "./carspecific/boringcommoncar/OptimalRange";
 import { GearRange } from "./driver/GearRange";
+import { GearCalculators } from "./driver/calculator/GearCalculators";
+import { GearCalculator } from "./driver/calculator/GearCalculator";
 
 enum DriveMode {
   Eco,
@@ -9,7 +11,7 @@ enum DriveMode {
   Sport,
 }
 
-export class DefaultGearCalculators {
+export class DefaultGearCalculators implements GearCalculators {
   private driveMode: DriveMode = DriveMode.Comfort;
   private characteristics: Characteristics;
   private gearboxACL: GearboxACL;
@@ -19,7 +21,19 @@ export class DefaultGearCalculators {
     this.gearboxACL = gearboxACL;
   }
 
-  choose(): OptimalRange {
+  enableEco() {
+    this.driveMode = DriveMode.Eco;
+  }
+
+  enableComfort() {
+    this.driveMode = DriveMode.Comfort;
+  }
+
+  enableSport() {
+    this.driveMode = DriveMode.Sport;
+  }
+
+  suggest(): GearCalculator {
     if (this.driveMode === DriveMode.Eco) {
       return new OptimalRange(
         new GearRange(this.gearboxACL.firstGear(), this.gearboxACL.maxGear()),
@@ -45,21 +59,5 @@ export class DefaultGearCalculators {
       new GearRange(this.gearboxACL.firstGear(), this.gearboxACL.maxGear()),
       this.characteristics.optimalComfortRpmRange()
     );
-  }
-
-  enableEco() {
-    this.driveMode = DriveMode.Eco;
-  }
-
-  enableComfort() {
-    this.driveMode = DriveMode.Comfort;
-  }
-
-  enableSport() {
-    this.driveMode = DriveMode.Sport;
-  }
-
-  suggest(): import("./driver/calculator/GearCalculator").GearCalculator {
-    throw new Error("Method not implemented.");
   }
 }

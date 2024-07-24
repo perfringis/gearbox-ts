@@ -1,8 +1,8 @@
 import { Gear } from "./Gear";
-import { DefaultGearCalculators } from "../DefaultGearCalculators";
-import { DefaultRpmProvider } from "../DefaultRpmProvider";
 import { Shifter } from "./shifter/Shifter";
 import { GearCalculator } from "./calculator/GearCalculator";
+import { RpmProvider } from "../engine/RpmProvider";
+import { GearCalculators } from "./calculator/GearCalculators";
 
 enum DriverState {
   Reverse,
@@ -12,13 +12,13 @@ enum DriverState {
 }
 
 export class GearboxDriver {
-  private rpmProvider: DefaultRpmProvider;
+  private rpmProvider: RpmProvider;
   private shifter: Shifter;
-  private gearCalculators: DefaultGearCalculators;
+  private gearCalculators: GearCalculators;
   private state: DriverState = DriverState.Park;
 
   // prettier-ignore
-  constructor(rpmProvider: DefaultRpmProvider, shifter: Shifter, gearCalculators: DefaultGearCalculators) {
+  constructor(rpmProvider: RpmProvider, shifter: Shifter, gearCalculators: GearCalculators) {
     this.rpmProvider = rpmProvider;
     this.shifter = shifter;
     this.gearCalculators = gearCalculators;
@@ -43,6 +43,7 @@ export class GearboxDriver {
   recalculate(): void {
     if (this.state === DriverState.Drive) {
       const newGear: Gear = this.suggestedGear();
+
       this.shifter.changeGearTo(newGear);
     }
   }

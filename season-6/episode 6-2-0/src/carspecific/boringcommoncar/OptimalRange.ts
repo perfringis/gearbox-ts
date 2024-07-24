@@ -14,7 +14,7 @@ export class OptimalRange implements GearCalculator {
   }
 
   calculate(currentRpm: RPM, currentGear: Gear) {
-    const gear: Gear = this.calculate(currentRpm, currentGear);
+    const gear: Gear = this.calculateGear(currentRpm, currentGear);
     return this.range.trim(gear);
   }
 
