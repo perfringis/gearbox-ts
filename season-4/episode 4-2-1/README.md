@@ -1,3 +1,7 @@
+# Note for 4.1.1
+
+In this case, we remove all the created classes that were split for the given if statements. Creating separate classes is an unnecessary operation. A characteristic feature that can be observed is that the classes do not differ from each other and only differ in the values passed to the class constructor.
+
 # Meta-model
 
 [Managing complexity through the tripartite division of logic – Open/Closed Principle in practice](https://bottega.com.pl/pdf/materialy/receptury/ocp.pdf)
@@ -51,10 +55,7 @@ export class GearboxDriver {
   recalculate(): void {
     if (this.state === DriverState.Drive) {
 +      const gearCalculator: GearCalculator = this.chooseCalculator();
-+      const newGear: Gear = gearCalculator.calculateGear(
-+        this.rpmProvider.current(),
-+        this.gearbox.currentGear()
-+      );
++      const newGear: Gear = gearCalculator.calculateGear(this.rpmProvider.current(), this.gearbox.currentGear());
       this.gearbox.changeGearTo(newGear);
     }
   }
